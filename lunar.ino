@@ -30,7 +30,7 @@ float ship_angle = PI/2;
 float ship_altitude = 10;
 float maxThrust = 10;
 float thrust = 0;
-float gravity = 0.1;
+float gravity = 0.3;
 float fuel = 100;
 float score = 0;
 int minHeight = 1;
@@ -276,7 +276,7 @@ void checkKeys() {
       } else {thrust = maxThrust;}
      ship_ax = thrust*cos(ship_angle);
      ship_ay = gravity-(thrust*sin(ship_angle));
-     fuel -= 0.0025*thrust;
+     fuel -= 0.0015*thrust;
    } else {
      if (thrust>0) {thrust -= 0.1;}
      if (thrust<0) {thrust = 0;}
